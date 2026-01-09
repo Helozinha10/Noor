@@ -1,0 +1,25 @@
+{
+  "name": "noor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@alpinejs/intersect": "^3.15.3",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "alpinejs": "^3.15.3",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "sass": "^1.97.2",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.2.4"
+  }
+}

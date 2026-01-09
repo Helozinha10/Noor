@@ -1,0 +1,82 @@
+[
+    {
+        "id": "beetle",
+        "name": "Beetle",
+        "price": 450,
+        "description": "Bolsa meia-lua em tecido preto com bordado floral em tons de verde esmeralda e dourado. Detalhes em paetês e pedrarias que capturam a luz de forma única. Alça com correntes douradas e acabamento em couro sintético.",
+        "dimensions": {
+            "width": "28cm",
+            "height": "18cm",
+            "depth": "8cm"
+        },
+        "material": "Tecido bordado à mão, paetês, pedrarias, corrente dourada",
+        "care": "Evitar contato com água. Guardar em saco de algodão.",
+        "image": "image0.jpeg",
+        "available": true,
+        "uniquePiece": true
+    },
+    {
+        "id": "disco",
+        "name": "Disco",
+        "price": 380,
+        "description": "Bolsa compacta estilo mini tote com mosaico de paetês em tons de azul, prata e preto. Design geométrico inspirado nas pistas de dança dos anos 70. Alça trançada em cordão preto.",
+        "dimensions": {
+            "width": "22cm",
+            "height": "15cm",
+            "depth": "10cm"
+        },
+        "material": "Paetês bordados à mão, cordão trançado, forro em cetim",
+        "care": "Limpar com pano seco. Evitar exposição ao sol prolongada.",
+        "image": "image1.jpeg",
+        "available": true,
+        "uniquePiece": true
+    },
+    {
+        "id": "cherry",
+        "name": "Cherry",
+        "price": 520,
+        "description": "Bolsa estruturada totalmente coberta por miçangas vermelhas em degradê. Tons que vão do bordô ao vermelho cereja, criando um efeito visual hipnotizante. Alças duplas também bordadas.",
+        "dimensions": {
+            "width": "25cm",
+            "height": "20cm",
+            "depth": "12cm"
+        },
+        "material": "Miçangas de vidro bordadas à mão, estrutura rígida, forro em veludo",
+        "care": "Manusear com cuidado. Guardar em local seco e arejado.",
+        "image": "image2.jpeg",
+        "available": true,
+        "uniquePiece": true
+    },
+    {
+        "id": "chrome",
+        "name": "Chrome",
+        "price": 480,
+        "description": "Bolsa baguette com acabamento prateado metálico. Corpo em miçangas prata com base listrada em preto e prata. Alça de corrente entrelaçada com couro. Tag exclusiva NOOR.",
+        "dimensions": {
+            "width": "24cm",
+            "height": "14cm",
+            "depth": "6cm"
+        },
+        "material": "Miçangas metálicas, corrente prateada, couro sintético, tag de metal",
+        "care": "Polir com flanela macia. Evitar contato com perfumes.",
+        "image": "image3.jpeg",
+        "available": true,
+        "uniquePiece": true
+    },
+    {
+        "id": "marrocos",
+        "name": "Marrocos",
+        "price": 550,
+        "description": "Tote bag inspirada nos mosaicos marroquinos. Padrão geométrico em tons de mostarda, turquesa, verde e lilás. Cada quadrado é uma obra de arte bordada à mão. Alças em couro preto.",
+        "dimensions": {
+            "width": "35cm",
+            "height": "28cm",
+            "depth": "12cm"
+        },
+        "material": "Bordado à mão em lã e linha, alças de couro legítimo, forro em algodão",
+        "care": "Limpar manchas pontualmente. Não lavar em máquina.",
+        "image": "image4.jpeg",
+        "available": true,
+        "uniquePiece": true
+    }
+]

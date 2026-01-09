@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#0A1E40"/>
+  
+  <!-- Star decoration -->
+  <text x="50" y="58" 
+        text-anchor="middle" 
+        dominant-baseline="middle" 
+        font-family="serif" 
+        font-size="36" 
+        fill="#C5A059">
+    ✦
+  </text>
+  
+  <!-- Subtle ring -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#D988B9" stroke-width="2" opacity="0.5"/>
+</svg>

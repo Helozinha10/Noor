@@ -1,0 +1,49 @@
+// ==================================================
+// NOOR Brand - Design Tokens (SCSS Variables)
+// ==================================================
+// Paleta extraída das imagens de referência:
+// - Listras azuis watercolor (Imagem 1)
+// - Blocos de vidro coloridos (Imagem 2)
+
+// Colors
+$color-royal-blue: #0A1E40;
+$color-cream-paper: #F2F0E6;
+$color-gold-star: #C5A059;
+$color-glass-green: #4A6B63;
+$color-retro-pink: #D988B9;
+$color-highlight-yellow: #FEF08A;
+$color-aqua: #5BB3B3;
+$color-mosaic-blue: #1E3A5F;
+
+// Typography
+$font-display: 'Playfair Display', serif;
+$font-hand: 'Permanent Marker', cursive;
+$font-body: 'Space Mono', monospace;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+$spacing-2xl: 6rem;
+
+// Border Radius
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-full: 9999px;
+
+// Transitions
+$transition-fast: 150ms ease;
+$transition-base: 300ms ease;
+$transition-slow: 500ms ease;
+
+// Z-index layers
+$z-noise: 9999;
+$z-cursor: 9998;
+$z-modal: 1000;
+$z-header: 100;
+$z-sticky: 50;
+$z-elevated: 10;
+$z-base: 1;

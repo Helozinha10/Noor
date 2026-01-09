@@ -1,0 +1,404 @@
+/* ==================================================
+   NOOR Brand - Global Styles & Artistic Effects
+   ================================================== */
+
+@import "tailwindcss";
+
+/* ==================================================
+   CSS Custom Properties (Design Tokens)
+   ================================================== */
+:root {
+    /* Paleta extraída das imagens de referência */
+    --color-royal-blue: #0A1E40;
+    --color-cream-paper: #F2F0E6;
+    --color-gold-star: #C5A059;
+    --color-glass-green: #4A6B63;
+    --color-retro-pink: #D988B9;
+    --color-highlight-yellow: #FEF08A;
+    --color-aqua: #5BB3B3;
+    --color-mosaic-blue: #1E3A5F;
+
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-hand: 'Permanent Marker', cursive;
+    --font-body: 'Space Mono', monospace;
+    --font-vintage: 'Pacifico', cursive;
+
+    /* Custom Cursor */
+    --cursor-size: 20px;
+}
+
+/* ==================================================
+   Reset & Base Styles
+   ================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-cream-paper);
+    color: var(--color-royal-blue);
+    overflow-x: hidden;
+}
+
+/* ==================================================
+   Noise Overlay Effect
+   Simula textura de filme/papel analógico
+   ================================================== */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+/* ==================================================
+   Typography Utilities
+   ================================================== */
+.font-display {
+    font-family: var(--font-display);
+}
+
+.font-hand {
+    font-family: var(--font-hand);
+}
+
+.font-body {
+    font-family: var(--font-body);
+}
+
+.font-vintage {
+    font-family: var(--font-vintage);
+}
+
+/* Highlight effect - marca texto */
+.text-highlight {
+    background: linear-gradient(180deg, transparent 50%, var(--color-highlight-yellow) 50%);
+    padding: 0 0.25em;
+}
+
+.text-highlight-pink {
+    background: linear-gradient(180deg, transparent 50%, var(--color-retro-pink) 50%);
+    padding: 0 0.25em;
+}
+
+/* ==================================================
+   Paper & Texture Effects
+   ================================================== */
+.paper-texture {
+    background-color: var(--color-cream-paper);
+    background-image:
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%),
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23grain)' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+.torn-edge-top {
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 3%,
+            black 100%);
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 3%,
+            black 100%);
+    clip-path: polygon(0% 2%, 5% 0%, 10% 3%, 15% 1%, 20% 2%, 25% 0%,
+            30% 3%, 35% 1%, 40% 2%, 45% 0%, 50% 3%, 55% 1%,
+            60% 2%, 65% 0%, 70% 3%, 75% 1%, 80% 2%, 85% 0%,
+            90% 3%, 95% 1%, 100% 2%, 100% 100%, 0% 100%);
+}
+
+.torn-edge-bottom {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 98%, 95% 100%, 90% 97%,
+            85% 99%, 80% 98%, 75% 100%, 70% 97%, 65% 99%,
+            60% 98%, 55% 100%, 50% 97%, 45% 99%, 40% 98%,
+            35% 100%, 30% 97%, 25% 99%, 20% 98%, 15% 100%,
+            10% 97%, 5% 99%, 0% 98%);
+}
+
+/* ==================================================
+   Sticker Effect
+   ================================================== */
+.sticker {
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sticker:hover {
+    transform: scale(1.05) rotate(-2deg);
+    filter: drop-shadow(4px 8px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* Tape effect - fita adesiva */
+.tape {
+    position: relative;
+}
+
+.tape::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 60px;
+    height: 20px;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0.1) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 0.7;
+}
+
+/* ==================================================
+   Glassmorphism Effect
+   ================================================== */
+.glass {
+    background: rgba(242, 240, 230, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-dark {
+    background: rgba(10, 30, 64, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ==================================================
+   Animation Utilities
+   ================================================== */
+.jitter {
+    animation: jitter 0.3s infinite;
+}
+
+@keyframes jitter {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-1px, 1px) rotate(-0.5deg);
+    }
+
+    50% {
+        transform: translate(1px, -1px) rotate(0.5deg);
+    }
+
+    75% {
+        transform: translate(-1px, -1px) rotate(-0.5deg);
+    }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Fade up animation para entrada de elementos */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Spin slow for stickers */
+.spin-slow {
+    animation: spin-slow 8s linear infinite;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulse soft */
+.pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* ==================================================
+   Levitating Shadow Effect
+   Para o componente SlidingDuoInteraction
+   ================================================== */
+.levitate-shadow {
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.15),
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.levitate-shadow:hover {
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.2),
+        0 30px 60px rgba(0, 0, 0, 0.15),
+        0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================================================
+   Button Styles
+   ================================================== */
+.btn-aesthetic {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    font-family: var(--font-hand);
+    font-size: 1.125rem;
+    color: var(--color-cream-paper);
+    background-color: var(--color-royal-blue);
+    border: 2px solid var(--color-royal-blue);
+    border-radius: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.btn-aesthetic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-aesthetic:hover {
+    background-color: var(--color-retro-pink);
+    border-color: var(--color-retro-pink);
+    transform: rotate(-2deg) scale(1.05);
+}
+
+.btn-aesthetic:hover::before {
+    left: 100%;
+}
+
+/* ==================================================
+   Marquee Styles
+   ================================================== */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--color-royal-blue);
+    color: var(--color-cream-paper);
+    padding: 1rem 0;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ==================================================
+   Responsive Utilities
+   ================================================== */
+@media (max-width: 768px) {
+    body {
+        cursor: auto;
+        /* Mostra cursor padrão em mobile */
+    }
+
+    .custom-cursor,
+    .custom-cursor-dot {
+        display: none;
+    }
+
+    .jitter {
+        animation: none;
+    }
+}
+
+/* ==================================================
+   Accessibility - Reduced Motion
+   ================================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Selection color */
+::selection {
+    background-color: var(--color-retro-pink);
+    color: var(--color-cream-paper);
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+    outline: 2px dashed var(--color-gold-star);
+    outline-offset: 4px;
+}
