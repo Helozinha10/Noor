@@ -40,13 +40,7 @@
               loading="lazy"
             />
             
-            <div class="absolute inset-0 flex items-center justify-center bg-royal-blue/0 
-                        group-hover:bg-royal-blue/10 transition-colors duration-300">
-              <span class="text-royal-blue/0 group-hover:text-royal-blue/60 text-3xl 
-                          transition-all duration-300">
-                +
-              </span>
-            </div>
+
             
             <div 
               v-if="product.uniquePiece"
